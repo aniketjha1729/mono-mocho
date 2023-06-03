@@ -1,0 +1,17 @@
+<div class="border w-50">
+  {{ data }}
+  <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+    <input type="text" name="email" id="" placeholder="email" ngModel /><br />
+    <input
+      type="password"
+      name="password"
+      placeholder="******"
+      id=""
+      ngModel
+    /><br />
+    <button type="submit">Submit</button>
+  </form>
+  <div class="mt-2">
+    <app-category [data]="data"></app-category>
+  </div>
+</div>
